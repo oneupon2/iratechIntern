@@ -1,0 +1,16 @@
+
+<br>
+<br>
+<div *ngFor="let value of values; let i = index"> 
+  <input type="tel" [(ngModel)]="value.value" #name="ngModel" name="value{{i}}">
+  
+</div>
+<button (click)="addvalue()">ADD</button>
+<br>
+<br>
+
+
+<h2>Result</h2>
+<div *ngFor="let value of values; let i = index">
+phoneNumber {{i + 1}} :{{ value.value }}
+</div>
